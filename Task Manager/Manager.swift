@@ -11,13 +11,13 @@ import Foundation
 class Manager {
     var tasksArray: [Tasks] = [Tasks(taskName: "Do Homework", details: "You have one math worksheet left"), Tasks(taskName: "Take out Garbage", details: "Take garbage out")]//inital tasks
     
-    func quit() {
+    func quit() {//quit function
         let shouldQuit = true
         
         print("Thanks for using our application")
     }
     
-    func getInput() -> String {
+    func getInput() -> String {//fucntion that gets input from the user in the form of strings
         var userInput = readLine()
         
         while userInput == nil || userInput == "" {

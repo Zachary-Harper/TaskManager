@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Menu {
+class Menu {//base menu class 
     var shouldQuit = false
     
     let tasksListOne = Manager()

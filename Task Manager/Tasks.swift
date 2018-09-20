@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Tasks {
+class Tasks {//base tasks class
     var taskName : String
     var details : String
     var complete: Bool = false
