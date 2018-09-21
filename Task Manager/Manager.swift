@@ -12,7 +12,7 @@ class Manager {
     var tasksArray: [Tasks] = [Tasks(taskName: "Do Homework", details: "You have one math worksheet left"), Tasks(taskName: "Take out Garbage", details: "Take garbage out")]//inital tasks
     
     func quit() {//quit function
-        let shouldQuit = true
+        _ = true
         
         print("Thanks for using our application")
     }

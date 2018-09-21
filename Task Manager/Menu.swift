@@ -15,7 +15,7 @@ class Menu {//base menu class
     func go(){
         while !shouldQuit {//while the program should run do this
             printMenu()//prints the main menu
-            print(getInput())
+
             let input = getInput()
             
             while !validateInput(input: input){
@@ -77,7 +77,7 @@ class Menu {//base menu class
     }
     
     func handleInput(_ input : String) {
-        switch getInput() {
+        switch input {
         case "1"://calls the create a new task function
             tasksListOne.addTask()
         case "2":// calls the list all function
