@@ -15,7 +15,7 @@ class Tasks {//base tasks class
     var complete: Bool = false
     var completeByDate : Date?
     
-    init(taskName: String, details: String) {
+    init(taskName: String, details: String) {//initalizes the taskname and details
         self.taskName = taskName
         self.details = details
     }

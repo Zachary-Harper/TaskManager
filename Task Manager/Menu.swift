@@ -18,11 +18,11 @@ class Menu {//base menu class
 
             let input = getInput()
             
-            while !validateInput(input: input){
-                printMenu()
+            while !validateInput(input: input){//what it runs when the input is not valid
+                printMenu()//prints the menu again
                 var _ = getInput()
             }
-            handleInput(input)
+            handleInput(input)//the input in the go function
         }
         }
         
@@ -30,7 +30,7 @@ class Menu {//base menu class
     
     
     
-    func printMenu() {
+    func printMenu() {//print menu function // prints what options that you have
         print("""
         
          Task Manager
@@ -50,24 +50,25 @@ class Menu {//base menu class
     
     
     
-    func getInput() -> String {
+    func getInput() -> String {//the get input function
         var userInput = readLine()
-        
+        // making sure that the readline input is actually valid
         while userInput == nil || userInput == "" {
             print("Please give a valid input")
-            userInput = readLine()
+            userInput = readLine()//prints readline again to make a valid funtion
         }
         return userInput!
     }
 
-    func quit() {
-        shouldQuit = true
+    func quit() {//quit function
+        shouldQuit = true//makes the should quit true and then quits the function
         print("Thank you for visiting")
+        
     }
     
     func validateInput(input: String) -> Bool  {
-        let validMenuOptions = Array(1...9)
-        guard let number = Int(input) else {//if the number thats assigned is
+        let validMenuOptions = Array(1...8)//makes the menu option only equal to 1-8
+        guard let number = Int(input) else {
             return false
         }
         return validMenuOptions.contains(number)
@@ -76,7 +77,7 @@ class Menu {//base menu class
         
     }
     
-    func handleInput(_ input : String) {
+    func handleInput(_ input : String) {//handles the input from getInput
         switch input {
         case "1"://calls the create a new task function
             tasksListOne.addTask()
