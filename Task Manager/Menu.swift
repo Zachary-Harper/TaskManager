@@ -42,8 +42,9 @@ class Menu {//base menu class
          6. Mark A Complete Task Incomplete
          7. Delete A Task
          8. Quit Program
+         9. Edit an Exsisting Task
         
-        Please enter a number from 1 to 8
+        Please enter a number from 1 to 9
 
 """)
     }
@@ -67,7 +68,7 @@ class Menu {//base menu class
     }
     
     func validateInput(input: String) -> Bool  {
-        let validMenuOptions = Array(1...8)//makes the menu option only equal to 1-8
+        let validMenuOptions = Array(1...9)//makes the menu option only equal to 1-9
         guard let number = Int(input) else {
             return false
         }
@@ -95,6 +96,8 @@ class Menu {//base menu class
             tasksListOne.deleteTask()
         case "8"://calls the quit function
             tasksListOne.quit()
+        case "9"://calls the edit task function
+            tasksListOne.editTask()
         default:
             break
         }
