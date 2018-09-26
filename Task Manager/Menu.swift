@@ -95,7 +95,7 @@ class Menu {//base menu class
         case "7"://calls the delete a task function
             tasksListOne.deleteTask()
         case "8"://calls the quit function
-            tasksListOne.quit()
+            quit()
         case "9"://calls the edit task function
             tasksListOne.editTask()
         default:
