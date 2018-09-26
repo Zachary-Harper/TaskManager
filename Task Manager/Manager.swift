@@ -131,11 +131,9 @@ class Manager {//the manager class
         
     }
     
-    func editTask() {
+    func editTask() {//the edit function
         
-        
-        
-        for index in 0..<tasksArray.count{
+        for index in 0..<tasksArray.count{//prints the index and name of each task
             
                 print("\(index) : \(tasksArray[index].taskName)")
             
@@ -143,18 +141,18 @@ class Manager {//the manager class
         
         print("Please select the number of the task you wish to edit.")
         
-        var userInput = Int(readLine()!)
+        var userInput = Int(readLine()!)//asks what task you would like to edit
         
-        while userInput == nil {
+        while userInput == nil {//makes sure that the input is valid
             print("Invalid input. Please enter a useable index")
             userInput = Int(readLine()!)
         }
         
-        print("Please enter a new task name")
-        tasksArray[userInput!].taskName = readLine()!
+        print("Please enter a new task name")//asks for new task name
+        tasksArray[userInput!].taskName = readLine()!//assigns the  new task name to the previously selected task
         
         print("Please enter a new task description")
-        tasksArray[userInput!].details = readLine()!
+        tasksArray[userInput!].details = readLine()!//assigns the new description to the previously selected task
         
         
         
