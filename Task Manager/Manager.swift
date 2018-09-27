@@ -55,7 +55,7 @@ class Manager {//the manager class
 
     func listAllTasks() {
         for index in 0..<tasksArray.count{//lists all tasks from 0(start of arrasy) to whatever the end value is
-            print("\(index) : \(tasksArray[index].taskName)")//prints what it is in the array and the task name
+            print("\(index) : \(tasksArray[index].taskName) - \(tasksArray[index].details)")//prints what it is in the array and the task name
         }
     }
     func deleteTask() {
